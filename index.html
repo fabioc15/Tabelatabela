@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>ATIVIDADE TABELA</title>
+</head>
+
+<body id="corpo">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div style="text-align: center">
+                    <img id="logo" class="logo" alt="logo"
+                        src="OIG.59v-removebg-preview.png   "</div>
+           
+                <h3 class="text-center">
+                    <strong>Moto Motors</strong>
+                </h3>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>
+                                Nome
+                            </th>
+                            <th>
+                                Turma
+                            </th>
+                            <th>
+                                1ºTrimestre
+                            </th>
+                            <th>
+                                2ºTrimestre
+                            </th>
+                            <th>
+                                3ºTrimestre
+                            </th>
+                            <th>
+                                Comentario
+                            </th>
+                            <th>
+                                Sobre
+                            </th>
+                        </tr>
+                    </thead>
+                </div>
+                    <tbody id="carros"></tbody>
+                </table>
+                <dl>
+                    Selecione um Aluno para obter mais informações
+                </dl>
+
+                <!-- Botão Novo Cliente -->
+                <div class="text-center">
+                    <button class="btn btn-primary" id="btnNovoCliente">Cadastrar Aluno</button>
+                </div>
+
+                <!-- Modal Novo Cliente -->
+                <div id="modalNovoCliente" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2 class="cadastronovoaluno">Cadastrar Novo Aluno</h2>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formNovoCliente">
+                                <label for="placa">Nome:</label>
+                                <input type="text" id="placa" required>
+
+                                <label for="nome">Turma:</label>
+                                <input type="text" id="nome" required>
+
+                                <label for="atendimento">1ºTrimestre:</label>
+                                <select id="atendimento" required>
+                                    <option value="C">C</option>
+                                    <option value="B">B</option>
+                                    <option value="A">A</option>
+                                </select>
+
+                                <label for="conhecimento">2ºTrimestre:</label>
+                                <select id="conhecimento" required>
+                                    <option value="C">C</option>
+                                    <option value="B">B</option>
+                                    <option value="A">A</option>
+                                </select>
+
+                                <label for="infraestrutura">3ºTrimestre:</label>
+                                <select id="infraestrutura" required>
+                                    <option value="C">C</option>
+                                    <option value="B">B</option>
+                                    <option value="A">A</option>
+                                </select>
+
+                                <label for="comentario">Comentário:</label>
+                                <input type="text" id="comentario" required>
+
+                                <button type="button" onclick="cadastrarCliente()">Cadastrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal de Informações do Cliente -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2 class="coisacalçajeans">Informações do Cliente</h2>
+                        <p>Nome: <span id="placaModal"></span></p>
+                        <p>Place: <span id="nomeModal"></span></p>
+                        <p>1ºTrimestre: <span id="atendimentoModal"></span></p>
+                        <p>2ºTrimestre: <span id="conhecimentoModal"></span></p>
+                        <p>3ºTrimestre: <span id="infraestruturaModal"></span></p>
+                        <p>Comentario:<br> <span id="comentarioModal"></span></p>
+                        <button id="btnExcluirCliente">Excluir Aluno</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
